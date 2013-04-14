@@ -1,0 +1,15 @@
+A Jass syntax highlighting for the web.
+
+Highlightable parts:
+    - keywords
+    - types
+    - operators
+    - numbers
+    - strings
+    - comments
+    - common.j natives
+    - common.j constants
+    - blizzard.j functions
+    - blizzard.j constants
+
+Relativly fast, i.e a 9732 lines of blizzard.j for ~5 seconds on my machine.

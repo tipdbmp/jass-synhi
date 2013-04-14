@@ -1,0 +1,12 @@
+body { background: white; }
+
+pre { font-family: Consolas, 'Courier New', monospace; font-size: 10pt; }
+.jass-keyword             { color: blue; }
+.jass-type                { color: #2B91AF; }
+.jass-number              { color: #800080; }
+.jass-string              { color: #A31515; }
+.jass-comment             { color: #008000; }
+.jass-op                  { color: #666666; }
+.jass-const               { color: #800080; }
+.jass-common-j-native     { color: #2B91AF; }
+.jass-blizzard-j-function { color: #2B91AF; }

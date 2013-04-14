@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link href="../css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="../css/jass.css" type="text/css" rel="stylesheet" />
+
+    <title>1.j</title>
+</head>
+
+<body>
+<pre><span class="jass-comment">// not bar! =)</span>
+<span class="jass-keyword">function</span> foo <span class="jass-keyword">takes</span> <span class="jass-type">nothing</span> <span class="jass-keyword">returns</span> <span class="jass-type">integer</span>
+    <span class="jass-keyword">local</span> <span class="jass-type">string</span> s <span class="jass-op">=</span> <span class="jass-string">"this is a // funny integer => 5"</span>
+
+    <span class="jass-keyword">local</span> <span class="jass-type">real</span> r <span class="jass-op">=</span> <span class="jass-number">1.1</span> <span class="jass-comment">// rather arbitrary =)</span>
+    <span class="jass-keyword">loop</span>
+        <span class="jass-keyword">exitwhen</span> r<span class="jass-op">&gt;=</span><span class="jass-number">10.4</span>
+
+        <span class="jass-keyword">set</span> r <span class="jass-op">=</span> r <span class="jass-op">+</span> <span class="jass-number">0.1</span>
+    <span class="jass-keyword">endloop</span>
+
+    <span class="jass-keyword">if</span> (<span class="jass-number">1</span> <span class="jass-op">&lt;=</span> <span class="jass-number">2</span> <span class="jass-keyword">and</span> <span class="jass-number">2</span> <span class="jass-op">&lt;=</span> <span class="jass-number">3</span>) <span class="jass-keyword">then</span>
+        <span class="jass-keyword">call</span> Foo()
+    <span class="jass-keyword">elseif</span> (<span class="jass-keyword">not</span> (<span class="jass-number">1</span> <span class="jass-op">&gt;</span> <span class="jass-number">0</span>))
+        <span class="jass-keyword">call</span> Bar()
+    <span class="jass-keyword">elseif</span> <span class="jass-op">!</span> <span class="jass-number">1</span> <span class="jass-op">==</span> <span class="jass-number">0x0123</span> <span class="jass-keyword">then</span>
+    <span class="jass-keyword">elseif</span> <span class="jass-number">1</span> <span class="jass-op">!=</span> <span class="jass-number">'ogru'</span> <span class="jass-keyword">then</span>
+    <span class="jass-keyword">elseif</span> <span class="jass-const">true</span> <span class="jass-op">!=</span> <span class="jass-const">false</span> <span class="jass-keyword">then</span>
+    <span class="jass-keyword">else</span>
+        <span class="jass-keyword">call</span> FooBar()
+    <span class="jass-keyword">endif</span>
+
+    <span class="jass-keyword">call</span> CreateUnitBJ()
+    s <span class="jass-op">=</span> <span class="jass-string">"another string"</span> <span class="jass-comment">// comment with "string inside"</span>
+
+    <span class="jass-keyword">return</span> <span class="jass-common-j-native">S2I</span>(s)
+<span class="jass-keyword">endfunction</span>
+</pre>
+</body>
+
+</html>
