@@ -134,7 +134,7 @@ sub colorize
     [
         map { chomp; $_ } read_file('symbols/common_j_constants.txt', binmode => ':encoding(UTF-8)')
     ];
-    state $cjc = @$common_j_constants;
+    state $cjc = join '|', @$common_j_constants;
     $$jass_ref =~ s:\b($cjc)\b:<span class="$css_class_for{constant}">$1</span>:g;
 
 
@@ -164,11 +164,17 @@ sub colorize
 
     # # bring back the comments
     my $rep_comment = join '|', keys %$comments;
-    $$jass_ref =~ s:($rep_comment):<span class="$css_class_for{comment}">$comments->{$1}</span>:g;
+    if ($rep_comment ne '') # if we had comments
+    {
+        $$jass_ref =~ s:($rep_comment):<span class="$css_class_for{comment}">$comments->{$1}</span>:g;
+    }
 
     # # bring back the strings
     my $rep_str = join '|', keys %$strings;
-    $$jass_ref =~ s:($rep_str):<span class="$css_class_for{string}">$strings->{$1}</span>:g;
+    if ($rep_str ne '') # if we had strings
+    {
+        $$jass_ref =~ s:($rep_str):<span class="$css_class_for{string}">$strings->{$1}</span>:g;
+    }
 
 
     # chomp $$jass_ref;
